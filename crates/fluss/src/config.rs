@@ -303,11 +303,6 @@ impl Config {
     pub fn is_sasl_enabled(&self) -> bool {
         self.security_protocol.eq_ignore_ascii_case("sasl")
     }
-
-    /// Validates idempotence configuration. Returns `Ok(())` when the config is
-    /// consistent, or an error message when idempotence is enabled but other
-    /// settings are incompatible.
-
     /// Validates security configuration. Returns `Ok(())` when the config is
     /// consistent, or an error message when SASL is enabled but the config is
     /// incomplete or uses an unsupported mechanism.
